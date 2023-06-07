@@ -1,0 +1,26 @@
+<table style="width:100%;display:table;justify-content:center;margin-left:auto;margin-right:auto;text-align:center;">
+    <thead style="display:table-header-group;text-align:center;">
+        <tr>
+            <th style="text-align: center;">dataset</th>
+            <th style="text-align: center;">category</th>
+            <th style="text-align: center;">instances</th>
+            <th style="text-align: center;">features</th>
+            <th style="text-align: center;">annotations</th>
+            <th style="text-align: center;">annotations&nbsp;%</th>
+        </tr>
+    </thead>
+    <tbody style="display:table-row-group;">
+        {{ $url := "table_data.csv" }}
+        {{ $sep := "," }}
+        {{ range $i, $r := getCSV $sep $url }}
+          <tr>
+            <td>{{ index $r 0 }}</td>
+            <td>{{ index $r 1 }}</td>
+            <td>{{ index $r 2 }}</td>
+            <td>{{ index $r 3 }}</td>
+            <td>{{ index $r 4 }}</td>
+            <td>{{ index $r 5 }}</td>
+          </tr>
+        {{ end }}    
+    </tbody>
+</table>

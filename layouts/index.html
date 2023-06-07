@@ -1,0 +1,50 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">
+      {{ .Title }}
+      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := .Params.cover.hidden | default site.Params.cover.hiddenInSingle | default site.Params.cover.hidden }}
+  {{- partial "cover.html" (dict "cxt" . "IsHome" false "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  <div class="post-content">
+    <p>
+      Welcome to Semantic Feature Net - Healthcare, a comprehensive collection of tabular datasets related to the applications of machine learning in predictive tasks for healthcare. All datasets have been structured considering the semantic meaning of their features with concepts derived from the SNOMED-CT ontology. Each dataset has an associated set of features' annotations, which can be used for sharing valuable insights between diverse predictive tasks.
+      {{- partial "get_csv.html"}}
+    </p>
+    <h2>Annotated Features</h2>
+    <p>Graphs below visualize the proximity of the annotated features. The heatmap shows the similarity between each pair of features. Their order corresponds to the clusters' belonging, illustrated on the scatter plot.</p>
+    <div style="width: 100%;margin: auto;">
+    {{ $image := resources.Get "img/term_exploration_sefnet.png" }}
+    <img style="display: block;margin: auto;" src="{{ $image.RelPermalink }}" alt="Annotated terms visualization">
+    </div>
+    The graph above shows the relationship of annotated terms based on the taxonomy introduced in SNOMED-CT.
+    <h2>Citation</h2>
+  </div>
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}

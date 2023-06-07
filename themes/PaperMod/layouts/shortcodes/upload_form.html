@@ -1,0 +1,24 @@
+<script >
+    window.onload = (event) => {
+        var form = document.getElementById('upload-form');
+        form.reset(); 
+    };
+</script>
+
+If you want to help us develop the platform, you can upload your dataset and/or annotations here: <br><br>
+
+<form id="upload-form" accept-charset="UTF-8" action="https://getform.io/f/d06b96ce-7aba-4059-a781-c01b101d4d2d" method="POST" enctype="multipart/form-data" >
+    <label for="name">Name*:</label><br>
+    <input type="text" name="name" placeholder="Your Name" required="required"><br>
+    <label for="email">Email*:</label><br>
+    <input type="email" name="email" placeholder="Your Email" required="required"><br>
+    <label for="annotation">Annotations:</label><br>
+    <input type="file" name="annotation" accept=".csv"><br>
+    <label for="dataset">Dataset:</label><br>
+    <input type="file" name="dataset" accept=".csv"><br>
+    <label for="src">Source*:</label><br>
+    <input type="text" name="src" placeholder="Dataset source" required="required" ><br>
+    <label for="notes">Additional notes:</label><br>
+    <input type="text" name="notes" placeholder="Additional notes" ><br>
+    <button id="submitButton" type="submit" onclick="submitForm()">Upload annotations/dataset</button><br>
+</form> 

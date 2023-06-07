@@ -1,0 +1,16 @@
+Cardiovascular Study,Survey,4238,16,15,94%
+Diagnosis of COVID-19 (Subset),EHR,603,19,18,95%
+Diabetes Health Indicators ,Survey,253680,22,21,95%
+Diabetes 130 US,EHR,101766,49,38,78%
+GOSSIS-1-eICU Model Ready,EHR,131051,68,60,88%
+Stroke Prediction,Survey,5110,11,11,100%
+Heart Disease Indicators ,Survey,253680,22,21,95%
+Heart Disease (Comprehensive),EHR,1190,12,11,92%
+HCV data,EHR,615,13,13,100%
+Hepatitis,EHR,142,20,19,95%
+HiRID Preprocessed,EHR,33905,18,17,94%
+Pima Indians Diabetes,EHR,768,9,8,89%
+ILPD,EHR,583,11,11,100%
+Breast Cancer,EHR,286,10,9,90%
+metaMIMIC,EHR,34925,184,175,95%
+Thyroid Disease,EHR,3772,30,27,90%

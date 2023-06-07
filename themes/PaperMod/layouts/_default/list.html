@@ -1,0 +1,69 @@
+{{- define "main" }}
+
+{{- $term := .Data.Term }}
+{{- $kind := .Kind }}
+
+{{- if .Title }}
+<header class="page-header">
+  {{- if eq $kind `term`}}
+    <h1>Filter by: {{ .Title }}</h1>
+    <button class="return-button" style="margin-top: 10px;">
+      <a href='/datasets'>Delete filter</a>
+    </button>  
+  {{- else }}
+    <h1 style="margin-bottom: 10px;">{{ .Title }}</h1>
+    <button class="download-button-all">
+      <a href='/downloads/annotations.zip' target="_blank" download='annotations.zip'>Download all annotations</a>
+    </button>
+    <button class="download-button-all">
+      <a href='/downloads/datasets.zip' target="_blank" download='datasets.zip'>Download all datasets</a>
+    </button>
+  {{- end }}
+</header>
+{{- end }}
+
+{{ range site.Sections }}
+
+  {{ range .Sections }}
+  
+    <h2 style="margin-bottom: 15px;">{{ .Params.section_name }}</h2>
+
+    {{- $pages := .Pages }}
+
+    {{- range $index, $page := $pages }}
+
+      {{- $tags := .Params.tags }}
+      {{- if or (in $tags $term) (ne $kind `term`) }}
+
+        <article class="post-entry">
+
+          <header class="entry-header">
+          <h2>
+            <ul class="post-tags">
+              <div style="height: 30px; display: inline-block;vertical-align: middle;text-align: center;">
+              {{- .Title }}&nbsp;&nbsp;&nbsp;
+              </div>
+              {{- range $index, $tag := $tags -}}
+              <li><a href="#">{{ $tag }}</a></li>
+              {{- end -}}
+            </ul>
+          </h2>
+          </header>
+
+          <div class="entry-content">
+            <p>{{ .Description }}</p>
+          </div>
+
+          <footer class="entry-footer">
+            {{- partial "post_meta.html" . -}}
+          </footer>
+
+          <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+        </article>
+      
+      {{- end }}
+    {{- end }} 
+  {{- end }}
+{{- end }}
+
+{{- end }}{{- /* end main */ -}}

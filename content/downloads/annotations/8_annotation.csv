@@ -1,0 +1,13 @@
+,column_name,term_id
+0,age,397669002
+1,sex,263495000
+2,chest_pain_type,29857009
+3,resting_bp_s,271649006
+4,cholesterol,77068002
+5,fasting_blood_sugar,271062006
+6,resting_ecg,271921002
+7,max_heart_rate,428630002
+8,exercise_angina,300995000
+9,oldpeak,429622005
+10,ST_slope,None
+11,target,56265001

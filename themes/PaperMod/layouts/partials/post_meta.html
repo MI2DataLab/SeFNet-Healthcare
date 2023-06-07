@@ -1,0 +1,9 @@
+{{- $scratch := newScratch }}
+
+{{- if not .Date.IsZero -}}
+Upload date: &nbsp; {{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default "January 2, 2006" site.Params.DateFormat)))) }}
+{{- end }}
+
+{{- with ($scratch.Get "meta") }}
+{{- delimit . "&nbsp;·&nbsp;" -}}
+{{- end -}}

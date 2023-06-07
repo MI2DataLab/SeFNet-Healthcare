@@ -1,0 +1,10 @@
+,column_name,term_id
+0,Pregnancies,246211005
+1,Glucose,36048009
+2,BloodPressure,271650006
+3,SkinThickness,301851003
+4,Insulin,271226002
+5,BMI,60621009
+6,DiabetesPedigreeFunction,None
+7,Age,397669002
+8,Outcome,73211009

@@ -45,5 +45,13 @@ python DOSS.py
 
 ## Citation
 ```
-TBC
+@article{woznica2026sefnet,
+  title={SeFNet: Linking tabular datasets with semantic feature nets},
+  author={Wo{\'z}nica, Katarzyna and Wilczy{\'n}ski, Piotr and Biecek, Przemys{\l}aw},
+  journal={Information Fusion},
+  volume={125},
+  pages={103436},
+  year={2026},
+  publisher={Elsevier}
+}
 ```

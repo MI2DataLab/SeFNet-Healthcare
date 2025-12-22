@@ -120,7 +120,7 @@ menu:
       weight: 40
     - identifier: paper
       name: Paper
-      url: https://arxiv.org/abs/2306.11636
+      url: https://www.sciencedirect.com/science/article/pii/S1566253525005093
       weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true

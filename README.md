@@ -1,8 +1,8 @@
 [![DOI](https://zenodo.org/badge/650538391.svg)](https://zenodo.org/badge/latestdoi/650538391)
 
-# SeFNet: Bridging Tabular Datasets with Semantic Feature Nets
+# SeFNet: Linking tabular datasets with semantic feature nets
 
-This repository contains code and resources that can be used to reproduce the results presented in the article "SeFNet: Bridging Tabular Datasets with Semantic Feature Nets".
+This repository contains code and resources that can be used to reproduce the results presented in the article ["SeFNet: Linking tabular datasets with semantic feature nets"](https://www.sciencedirect.com/science/article/pii/S1566253525005093).
 
 ## Reproducting results
 ### 0. Annotating datasets <br>
